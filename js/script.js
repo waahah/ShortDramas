@@ -1,3 +1,10 @@
+const config = {
+    _event : 'click',
+    _btn : '.api-button',
+    _search : '#searchBtn',
+    _list : [dailyUpdate, getAllShortDramas, dailyUpdateAndDownload]
+}
+
 function searchAPI() {
     // 清除“全部短剧”页面的查询结果
     allShortDramasData = [];
@@ -214,3 +221,13 @@ function dailyUpdate() {
                     document.getElementById('results').innerHTML = 'An error occurred while fetching all short dramas data';
                 });
         }
+        
+        document.querySelector(config._search).addEventListener(config._event, searchAPI);
+        for (const key in config._list) {
+            if (Object.prototype.hasOwnProperty.call(config._list, key)) {
+                const fun = config._list[key];
+                document.querySelectorAll(config._btn)[key].addEventListener(config._event, fun);
+            }
+        }
+        
+        

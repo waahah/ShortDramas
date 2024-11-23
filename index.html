@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>短剧搜索</title>
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-        
-    </style>
+    
 </head>
 
 <body>
@@ -17,18 +15,18 @@
         <h1>短剧搜索</h1>
         <div class="search-container">
             <input type="text" id="searchText" placeholder="找剧请输入：部分剧名">
-            <button id="searchBtn" onclick="searchAPI()">搜索</button>
+            <button id="searchBtn" >搜索</button>
         </div>
         <div class="button-group">
-            <button class="api-button" onclick="dailyUpdate()">每日更新</button>
-            <button class="api-button" onclick="getAllShortDramas()">全部短剧</button>
-            <button class="api-button" onclick="dailyUpdateAndDownload()">下载近日更新</button>
+            <button class="api-button" >每日更新</button>
+            <button class="api-button" >全部短剧</button>
+            <button class="api-button" >下载近日更新</button>
         </div>
         <div class="results" id="results"></div>
         <div class="pagination" id="pagination"></div>
     </div>
 
-    <script src="./js/script.js" type="text/javascript">
+    <script type="module" src="./js/script.js" >
         
     </script>
 </body>
